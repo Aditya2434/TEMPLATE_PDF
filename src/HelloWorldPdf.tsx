@@ -350,6 +350,7 @@ const styles = StyleSheet.create({
   footerContainer: {
     width: "100%",
     flexDirection: "row", // display:flex
+    height: 90,
   },
 
   footerSubject: {
@@ -372,8 +373,8 @@ const styles = StyleSheet.create({
   },
 
   fStampStampImg: {
-    height: 68,
     width: "100%",
+    height: "100%",
     borderWidth: 1,
     borderColor: "black",
   },
@@ -397,8 +398,8 @@ const styles = StyleSheet.create({
   },
 
   fSignPhoto: {
-    height: 64,
     width: "100%",
+    height: "100%",
     borderWidth: 1,
     borderColor: "black",
   },
