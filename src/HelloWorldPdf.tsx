@@ -90,20 +90,20 @@ const styles = StyleSheet.create({
     // border: "1px solid red",
   },
   lwvLabel: {
-    width: "50%",
+    width: "40%",
     textAlign: "left",
-    paddingRight: 8,
+    paddingRight: 4,
     fontSize: 9,
     fontWeight: 500,
   },
   lwvColon: {
-    width: 10,
+    width: 6,
     textAlign: "center",
     fontSize: 9,
   },
   lwvValue: {
     flex: 1,
-    paddingLeft: 3,
+    paddingLeft: 2,
     fontSize: 9,
     textAlign: "left",
   },
@@ -117,7 +117,7 @@ const styles = StyleSheet.create({
   },
 
   lwvValueWrapper: {
-    width: "50%",
+    width: "60%",
     flexDirection: "row",
     alignItems: "flex-start",
   },
