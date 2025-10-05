@@ -2,7 +2,7 @@ import { Document, Page, Text, View, StyleSheet } from "@react-pdf/renderer";
 
 const styles = StyleSheet.create({
   page: {
-    padding: 8,
+    padding: 12,
   },
 
   container: {
@@ -110,6 +110,26 @@ const styles = StyleSheet.create({
     paddingLeft: 2,
     fontSize: 9,
     textAlign: "left",
+  },
+
+  stateCodeContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    flexWrap: "nowrap",
+    marginBottom: 3,
+  },
+  stateWrapper: {
+    flexDirection: "row",
+    alignItems: "center",
+    flexGrow: 1,
+  },
+  codeWrapper: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginLeft: 12,
+  },
+  stateInlineText: {
+    fontSize: 9,
   },
 
   // Right-aligned value for totals/taxes
@@ -493,12 +513,21 @@ export function HelloWorldPdf() {
                 </View>
               </View>
               <View style={styles.labelWithValue}>
-                <Text style={styles.lwvLabel}>State & Code</Text>
-                <View style={styles.lwvValueWrapper}>
-                  <Text style={styles.lwvColon}>:</Text>
-                  <Text style={styles.lwvValue}>
-                    West Bengal Durgapur Harayan 7143206
-                  </Text>
+                <View style={styles.stateCodeContainer}>
+                  <View style={styles.stateWrapper}>
+                    <Text style={styles.stateInlineText}>State</Text>
+                    <Text style={styles.lwvColon}>:</Text>
+                    <Text style={[styles.stateInlineText, styles.boldText]}>
+                      West Bengal Durgapur Harayan
+                    </Text>
+                  </View>
+                  <View style={styles.codeWrapper}>
+                    <Text style={styles.stateInlineText}>Code</Text>
+                    <Text style={styles.lwvColon}>:</Text>
+                    <Text style={[styles.stateInlineText, styles.boldText]}>
+                      7143206
+                    </Text>
+                  </View>
                 </View>
               </View>
             </View>
@@ -601,12 +630,21 @@ export function HelloWorldPdf() {
                 </View>
               </View>
               <View style={styles.labelWithValue}>
-                <Text style={styles.lwvLabel}>State & Code</Text>
-                <View style={styles.lwvValueWrapper}>
-                  <Text style={styles.lwvColon}>:</Text>
-                  <Text style={styles.lwvValue}>
-                    West Bengal Durgapur 7143206
-                  </Text>
+                <View style={styles.stateCodeContainer}>
+                  <View style={styles.stateWrapper}>
+                    <Text style={styles.stateInlineText}>State</Text>
+                    <Text style={styles.lwvColon}>:</Text>
+                    <Text style={[styles.stateInlineText, styles.boldText]}>
+                      West Bengal Durgapur Harayan
+                    </Text>
+                  </View>
+                  <View style={styles.codeWrapper}>
+                    <Text style={styles.stateInlineText}>Code</Text>
+                    <Text style={styles.lwvColon}>:</Text>
+                    <Text style={[styles.stateInlineText, styles.boldText]}>
+                      7143206
+                    </Text>
+                  </View>
                 </View>
               </View>
             </View>
@@ -645,12 +683,21 @@ export function HelloWorldPdf() {
                 </View>
               </View>
               <View style={styles.labelWithValue}>
-                <Text style={styles.lwvLabel}>State & Code</Text>
-                <View style={styles.lwvValueWrapper}>
-                  <Text style={styles.lwvColon}>:</Text>
-                  <Text style={styles.lwvValue}>
-                    West Bengal Durgapur 7143206
-                  </Text>
+                <View style={styles.stateCodeContainer}>
+                  <View style={styles.stateWrapper}>
+                    <Text style={styles.stateInlineText}>State</Text>
+                    <Text style={styles.lwvColon}>:</Text>
+                    <Text style={[styles.stateInlineText, styles.boldText]}>
+                      West Bengal Durgapur Harayan
+                    </Text>
+                  </View>
+                  <View style={styles.codeWrapper}>
+                    <Text style={styles.stateInlineText}>Code</Text>
+                    <Text style={styles.lwvColon}>:</Text>
+                    <Text style={[styles.stateInlineText, styles.boldText]}>
+                      7143206
+                    </Text>
+                  </View>
                 </View>
               </View>
             </View>
@@ -1186,7 +1233,7 @@ export function HelloWorldPdf() {
                   </View>
                 </View>
                 <View style={styles.bankRow}>
-                  <Text style={styles.bankLabel}>BANK</Text>
+                  <Text style={styles.bankLabel}>BANK NAME</Text>
                   <View style={styles.bankValueWrapper}>
                     <Text style={[styles.bankValue, styles.boldText]}>
                       SPS STEEL PVT LTD
