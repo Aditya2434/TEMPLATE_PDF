@@ -452,7 +452,7 @@ export function HelloWorldPdf() {
         <View style={styles.container}>
           <View style={styles.header}>
             <View style={styles.companyLogo}>
-              <Text>LOGO</Text>
+              <Text></Text>
             </View>
 
             <View style={styles.companyDetails}>
@@ -538,7 +538,7 @@ export function HelloWorldPdf() {
                 <Text style={styles.lwvLabel}>Transport Mode</Text>
                 <View style={styles.lwvValueWrapper}>
                   <Text style={styles.lwvColon}>:</Text>
-                  <Text style={styles.lwvValue}>Bus</Text>
+                  <Text style={styles.lwvValue}>Road</Text>
                 </View>
               </View>
               <View style={styles.labelWithValue}>
@@ -546,7 +546,7 @@ export function HelloWorldPdf() {
                 <View style={styles.lwvValueWrapper}>
                   <Text style={styles.lwvColon}>:</Text>
                   <Text style={[styles.lwvValue, styles.boldText]}>
-                    58WE54654
+                    WB40AU2596
                   </Text>
                 </View>
               </View>
@@ -570,7 +570,9 @@ export function HelloWorldPdf() {
                 <Text style={styles.lwvLabel}>Order No</Text>
                 <View style={styles.lwvValueWrapper}>
                   <Text style={styles.lwvColon}>:</Text>
-                  <Text style={[styles.lwvValue, styles.boldText]}>123456</Text>
+                  <Text style={[styles.lwvValue, styles.boldText]}>
+                    1234562131
+                  </Text>
                 </View>
               </View>
               <View style={styles.labelWithValue}>
@@ -578,7 +580,7 @@ export function HelloWorldPdf() {
                 <View style={styles.lwvValueWrapper}>
                   <Text style={styles.lwvColon}>:</Text>
                   <Text style={[styles.lwvValue, styles.boldText]}>
-                    4654897945
+                    465489794521
                   </Text>
                 </View>
               </View>
@@ -587,7 +589,7 @@ export function HelloWorldPdf() {
                 <View style={styles.lwvValueWrapper}>
                   <Text style={styles.lwvColon}>:</Text>
                   <Text style={[styles.lwvValue, styles.boldText]}>
-                    54654889864
+                    546548898641WED32
                   </Text>
                 </View>
               </View>
@@ -609,7 +611,7 @@ export function HelloWorldPdf() {
                 <View style={styles.lwvValueWrapper}>
                   <Text style={styles.lwvColon}>:</Text>
                   <Text style={[styles.lwvValue, styles.boldText]}>
-                    SPS STEEL PVT LTD
+                    Shree Hanuman Metaforge (India)Pvt.Ltd
                   </Text>
                 </View>
               </View>
@@ -618,7 +620,7 @@ export function HelloWorldPdf() {
                 <View style={styles.lwvValueWrapper}>
                   <Text style={styles.lwvColon}>:</Text>
                   <Text style={styles.lwvValue}>
-                    Chauhan niwas, swapna market Bengal, 713206
+                    Bamunara industrial Area, Paschim Bardhaman Durgapur, 713212
                   </Text>
                 </View>
               </View>
@@ -626,7 +628,7 @@ export function HelloWorldPdf() {
                 <Text style={styles.lwvLabel}>GSTIN</Text>
                 <View style={styles.lwvValueWrapper}>
                   <Text style={styles.lwvColon}>:</Text>
-                  <Text style={styles.lwvValue}>QWTHPK452489QWSI8OP</Text>
+                  <Text style={styles.lwvValue}>19AAGCS5104A1ZS</Text>
                 </View>
               </View>
               <View style={styles.labelWithValue}>
@@ -635,14 +637,14 @@ export function HelloWorldPdf() {
                     <Text style={styles.stateInlineText}>State</Text>
                     <Text style={styles.lwvColon}>:</Text>
                     <Text style={[styles.stateInlineText, styles.boldText]}>
-                      West Bengal Durgapur Harayan
+                      West Bengal
                     </Text>
                   </View>
                   <View style={styles.codeWrapper}>
                     <Text style={styles.stateInlineText}>Code</Text>
                     <Text style={styles.lwvColon}>:</Text>
                     <Text style={[styles.stateInlineText, styles.boldText]}>
-                      7143206
+                      19
                     </Text>
                   </View>
                 </View>
@@ -662,7 +664,7 @@ export function HelloWorldPdf() {
                 <View style={styles.lwvValueWrapper}>
                   <Text style={styles.lwvColon}>:</Text>
                   <Text style={[styles.lwvValue, styles.boldText]}>
-                    SPS STEEL PVT LTD
+                    Shree Hanuman Metaforge (India)Pvt.Ltd
                   </Text>
                 </View>
               </View>
@@ -671,7 +673,7 @@ export function HelloWorldPdf() {
                 <View style={styles.lwvValueWrapper}>
                   <Text style={styles.lwvColon}>:</Text>
                   <Text style={styles.lwvValue}>
-                    Chauhan niwas, swapna market Bengal, 713206
+                    Bamunara industrial Area, Paschim Bardhaman Durgapur, 713212
                   </Text>
                 </View>
               </View>
@@ -679,7 +681,7 @@ export function HelloWorldPdf() {
                 <Text style={styles.lwvLabel}>GSTIN</Text>
                 <View style={styles.lwvValueWrapper}>
                   <Text style={styles.lwvColon}>:</Text>
-                  <Text style={styles.lwvValue}>QWTHPK452489QWSI8OP</Text>
+                  <Text style={styles.lwvValue}>19AAGCS5104A1ZS</Text>
                 </View>
               </View>
               <View style={styles.labelWithValue}>
@@ -688,14 +690,14 @@ export function HelloWorldPdf() {
                     <Text style={styles.stateInlineText}>State</Text>
                     <Text style={styles.lwvColon}>:</Text>
                     <Text style={[styles.stateInlineText, styles.boldText]}>
-                      West Bengal Durgapur Harayan
+                      West Bengal
                     </Text>
                   </View>
                   <View style={styles.codeWrapper}>
                     <Text style={styles.stateInlineText}>Code</Text>
                     <Text style={styles.lwvColon}>:</Text>
                     <Text style={[styles.stateInlineText, styles.boldText]}>
-                      7143206
+                      19
                     </Text>
                   </View>
                 </View>
@@ -798,33 +800,32 @@ export function HelloWorldPdf() {
               </View>
               <View style={[styles.tableCellContainer, styles.productName]}>
                 <Text style={[styles.tableCellText, styles.textLeft]}>
-                  DISMANTLING , FITTING AND ALIGNMENT OF 13 NUMBER RAIL LINE FOR
-                  REHEATING ROLLING MILL FURNACE UNIT NO -2
+                  70% ALUMINA HANGER BRICK
                 </Text>
               </View>
               <View style={[styles.tableCellContainer, styles.hsnCode]}>
                 <Text style={[styles.tableCellText, styles.textCenter]}>
-                  456789
+                  690210
                 </Text>
               </View>
               <View style={[styles.tableCellContainer, styles.uom]}>
                 <Text style={[styles.tableCellText, styles.textCenter]}>
-                  SET
+                  NOS
                 </Text>
               </View>
               <View style={[styles.tableCellContainer, styles.qty]}>
                 <Text style={[styles.tableCellText, styles.textCenter]}>
-                  100000
+                  280
                 </Text>
               </View>
               <View style={[styles.tableCellContainer, styles.rate]}>
                 <Text style={[styles.tableCellText, styles.textRightPadded]}>
-                  1234567891
+                  525.00
                 </Text>
               </View>
               <View style={[styles.tableCellContainer, styles.total]}>
                 <Text style={[styles.tableCellText, styles.textRightPadded]}>
-                  123456789
+                  1,47,000.00
                 </Text>
               </View>
             </View>
@@ -835,135 +836,140 @@ export function HelloWorldPdf() {
               </View>
               <View style={[styles.tableCellContainer, styles.productName]}>
                 <Text style={[styles.tableCellText, styles.textLeft]}>
-                  DISMANTLING , FITTING AND ALIGNMENT OF 13 NUMBER RAIL LINE FOR
-                  REHEATING ROLLING MILL FURNACE UNIT NO -2
+                  70% ALUMINA SHOULDER BRICK
                 </Text>
               </View>
               <View style={[styles.tableCellContainer, styles.hsnCode]}>
                 <Text style={[styles.tableCellText, styles.textCenter]}>
-                  456789
+                  690210
                 </Text>
               </View>
               <View style={[styles.tableCellContainer, styles.uom]}>
                 <Text style={[styles.tableCellText, styles.textCenter]}>
-                  SET
+                  NOS
                 </Text>
               </View>
               <View style={[styles.tableCellContainer, styles.qty]}>
                 <Text style={[styles.tableCellText, styles.textCenter]}>
-                  100000
+                  240
                 </Text>
               </View>
               <View style={[styles.tableCellContainer, styles.rate]}>
                 <Text style={[styles.tableCellText, styles.textRightPadded]}>
-                  200
+                  500.00
                 </Text>
               </View>
               <View style={[styles.tableCellContainer, styles.total]}>
                 <Text style={[styles.tableCellText, styles.textRightPadded]}>
-                  1000
+                  1,20,000.00
                 </Text>
               </View>
             </View>
             {/* ROw 3 */}
             <View style={styles.row}>
               <View style={[styles.tableCellContainer, styles.serialNo]}>
-                <Text style={[styles.tableCellText, styles.textCenter]}>2</Text>
+                <Text style={[styles.tableCellText, styles.textCenter]}>3</Text>
               </View>
               <View style={[styles.tableCellContainer, styles.productName]}>
-                <Text style={[styles.tableCellText, styles.textLeft]}>BAR</Text>
+                <Text style={[styles.tableCellText, styles.textLeft]}>
+                  70% ALUMINA BRICK
+                </Text>
               </View>
               <View style={[styles.tableCellContainer, styles.hsnCode]}>
                 <Text style={[styles.tableCellText, styles.textCenter]}>
-                  456789
+                  690210
                 </Text>
               </View>
               <View style={[styles.tableCellContainer, styles.uom]}>
                 <Text style={[styles.tableCellText, styles.textCenter]}>
-                  SET
+                  NOS
                 </Text>
               </View>
               <View style={[styles.tableCellContainer, styles.qty]}>
                 <Text style={[styles.tableCellText, styles.textCenter]}>
-                  100000
+                  1200
                 </Text>
               </View>
               <View style={[styles.tableCellContainer, styles.rate]}>
                 <Text style={[styles.tableCellText, styles.textRightPadded]}>
-                  200
+                  110.00
                 </Text>
               </View>
               <View style={[styles.tableCellContainer, styles.total]}>
                 <Text style={[styles.tableCellText, styles.textRightPadded]}>
-                  1000
+                  1,32,000.00
                 </Text>
               </View>
             </View>
             {/* Row 4 */}
             <View style={styles.row}>
               <View style={[styles.tableCellContainer, styles.serialNo]}>
-                <Text style={[styles.tableCellText, styles.textCenter]}>2</Text>
+                <Text style={[styles.tableCellText, styles.textCenter]}>4</Text>
               </View>
               <View style={[styles.tableCellContainer, styles.productName]}>
-                <Text style={[styles.tableCellText, styles.textLeft]}>BAR</Text>
+                <Text style={[styles.tableCellText, styles.textLeft]}>
+                  INSULATION BRICK
+                </Text>
               </View>
               <View style={[styles.tableCellContainer, styles.hsnCode]}>
                 <Text style={[styles.tableCellText, styles.textCenter]}>
-                  456789
+                  690320
                 </Text>
               </View>
               <View style={[styles.tableCellContainer, styles.uom]}>
                 <Text style={[styles.tableCellText, styles.textCenter]}>
-                  SET
+                  NOS
                 </Text>
               </View>
               <View style={[styles.tableCellContainer, styles.qty]}>
                 <Text style={[styles.tableCellText, styles.textCenter]}>
-                  100000
+                  800
                 </Text>
               </View>
               <View style={[styles.tableCellContainer, styles.rate]}>
                 <Text style={[styles.tableCellText, styles.textRightPadded]}>
-                  200
+                  31.50
                 </Text>
               </View>
               <View style={[styles.tableCellContainer, styles.total]}>
                 <Text style={[styles.tableCellText, styles.textRightPadded]}>
-                  1000
+                  25,200.00
                 </Text>
               </View>
             </View>
             {/* Row 5 */}
             <View style={styles.row}>
               <View style={[styles.tableCellContainer, styles.serialNo]}>
-                <Text style={[styles.tableCellText, styles.textCenter]}>2</Text>
+                <Text style={[styles.tableCellText, styles.textCenter]}>5</Text>
               </View>
               <View style={[styles.tableCellContainer, styles.productName]}>
-                <Text style={[styles.tableCellText, styles.textLeft]}>BAR</Text>
+                <Text style={[styles.tableCellText, styles.textLeft]}>
+                  WHYTHEAT K
+                </Text>
               </View>
               <View style={[styles.tableCellContainer, styles.hsnCode]}>
                 <Text style={[styles.tableCellText, styles.textCenter]}>
-                  456789
+                  381600
                 </Text>
               </View>
               <View style={[styles.tableCellContainer, styles.uom]}>
                 <Text style={[styles.tableCellText, styles.textCenter]}>
-                  SET
+                  BAG
                 </Text>
               </View>
               <View style={[styles.tableCellContainer, styles.qty]}>
                 <Text style={[styles.tableCellText, styles.textCenter]}>
-                  100000
+                  1 MT
                 </Text>
               </View>
               <View style={[styles.tableCellContainer, styles.rate]}>
                 <Text style={[styles.tableCellText, styles.textRightPadded]}>
-                  200
+                  30,000.00
                 </Text>
               </View>
               <View style={[styles.tableCellContainer, styles.total]}>
                 <Text style={[styles.tableCellText, styles.textRightPadded]}>
-                  1000
+                  30,000.00
                 </Text>
               </View>
             </View>
@@ -971,34 +977,36 @@ export function HelloWorldPdf() {
             {/* Row 6 */}
             <View style={styles.row}>
               <View style={[styles.tableCellContainer, styles.serialNo]}>
-                <Text style={[styles.tableCellText, styles.textCenter]}>2</Text>
+                <Text style={[styles.tableCellText, styles.textCenter]}>6</Text>
               </View>
               <View style={[styles.tableCellContainer, styles.productName]}>
-                <Text style={[styles.tableCellText, styles.textLeft]}>BAR</Text>
+                <Text style={[styles.tableCellText, styles.textLeft]}>
+                  ACCOSET 50
+                </Text>
               </View>
               <View style={[styles.tableCellContainer, styles.hsnCode]}>
                 <Text style={[styles.tableCellText, styles.textCenter]}>
-                  456789
+                  690320
                 </Text>
               </View>
               <View style={[styles.tableCellContainer, styles.uom]}>
                 <Text style={[styles.tableCellText, styles.textCenter]}>
-                  SET
+                  BAG
                 </Text>
               </View>
               <View style={[styles.tableCellContainer, styles.qty]}>
                 <Text style={[styles.tableCellText, styles.textCenter]}>
-                  100000
+                  25
                 </Text>
               </View>
               <View style={[styles.tableCellContainer, styles.rate]}>
                 <Text style={[styles.tableCellText, styles.textRightPadded]}>
-                  200
+                  700.00
                 </Text>
               </View>
               <View style={[styles.tableCellContainer, styles.total]}>
                 <Text style={[styles.tableCellText, styles.textRightPadded]}>
-                  1000
+                  17,500.00
                 </Text>
               </View>
             </View>
@@ -1006,34 +1014,34 @@ export function HelloWorldPdf() {
             {/* Row 7 */}
             <View style={styles.row}>
               <View style={[styles.tableCellContainer, styles.serialNo]}>
-                <Text style={[styles.tableCellText, styles.textCenter]}>2</Text>
+                <Text style={[styles.tableCellText, styles.textCenter]}>7</Text>
               </View>
               <View style={[styles.tableCellContainer, styles.productName]}>
-                <Text style={[styles.tableCellText, styles.textLeft]}>BAR</Text>
+                <Text style={[styles.tableCellText, styles.textLeft]}>
+                  CERAMICS BLANKET 96
+                </Text>
               </View>
               <View style={[styles.tableCellContainer, styles.hsnCode]}>
                 <Text style={[styles.tableCellText, styles.textCenter]}>
-                  456789
+                  381600
                 </Text>
               </View>
               <View style={[styles.tableCellContainer, styles.uom]}>
                 <Text style={[styles.tableCellText, styles.textCenter]}>
-                  SET
+                  BOX
                 </Text>
               </View>
               <View style={[styles.tableCellContainer, styles.qty]}>
-                <Text style={[styles.tableCellText, styles.textCenter]}>
-                  100000
-                </Text>
+                <Text style={[styles.tableCellText, styles.textCenter]}>7</Text>
               </View>
               <View style={[styles.tableCellContainer, styles.rate]}>
                 <Text style={[styles.tableCellText, styles.textRightPadded]}>
-                  200
+                  1,250.00
                 </Text>
               </View>
               <View style={[styles.tableCellContainer, styles.total]}>
                 <Text style={[styles.tableCellText, styles.textRightPadded]}>
-                  1000
+                  8,750.00
                 </Text>
               </View>
             </View>
@@ -1151,9 +1159,8 @@ export function HelloWorldPdf() {
                   Total Amount in Words INR:
                 </Text>
                 <Text style={styles.amountWordsValue}>
-                  TWENTY NINE LAKH THIRY THOUAND THIS IS A LONG WORD NEED TO FIX
-                  HERE TWENTY NINE LAKH THIRY THOUAND THIS IS A LONG WORD NEED
-                  TO FIX
+                  FIVE LAKH SIXTY SIX THOUSAND NINE HUNDRED THIRTY ONE RUPEES
+                  ONLY.
                 </Text>
               </View>
             </View>
@@ -1165,7 +1172,7 @@ export function HelloWorldPdf() {
                   Total Amount before tax
                 </Text>
                 <View style={styles.lwvValueWrapper}>
-                  <Text style={styles.lwvValueRight}>98765432124.00</Text>
+                  <Text style={styles.lwvValueRight}>4,80,450.00</Text>
                 </View>
               </View>
               <View style={styles.labelWithValue}>
@@ -1173,7 +1180,7 @@ export function HelloWorldPdf() {
                   Add: CGST @ 9%
                 </Text>
                 <View style={styles.lwvValueWrapper}>
-                  <Text style={styles.lwvValueRight}>9876543212.00</Text>
+                  <Text style={styles.lwvValueRight}>43,240.50</Text>
                 </View>
               </View>
               <View style={styles.labelWithValue}>
@@ -1181,15 +1188,15 @@ export function HelloWorldPdf() {
                   Add: SGST @ 9%
                 </Text>
                 <View style={styles.lwvValueWrapper}>
-                  <Text style={styles.lwvValueRight}>9876543212.00</Text>
+                  <Text style={styles.lwvValueRight}>43,240.50</Text>
                 </View>
               </View>
               <View style={styles.labelWithValue}>
                 <Text style={[styles.lwvLabel, styles.boldText]}>
-                  Add: IGST @ 0%
+                  Add: IGST @ 18%
                 </Text>
                 <View style={styles.lwvValueWrapper}>
-                  <Text style={styles.lwvValueRight}>9876543212.00</Text>
+                  <Text style={styles.lwvValueRight}>0.00</Text>
                 </View>
               </View>
               <View style={[styles.labelWithValue, styles.taxDivider]}>
@@ -1197,7 +1204,7 @@ export function HelloWorldPdf() {
                   Total Tax Amount
                 </Text>
                 <View style={styles.lwvValueWrapper}>
-                  <Text style={styles.lwvValueRight}>9876543212.00</Text>
+                  <Text style={styles.lwvValueRight}>86,481.00</Text>
                 </View>
               </View>
               <View style={[styles.labelWithValue, styles.taxDivider]}>
@@ -1205,7 +1212,7 @@ export function HelloWorldPdf() {
                   Total Amount after Tax
                 </Text>
                 <View style={styles.lwvValueWrapper}>
-                  <Text style={styles.lwvValueRight}>9876543212.00</Text>
+                  <Text style={styles.lwvValueRight}>5,66,931.00</Text>
                 </View>
               </View>
             </View>
@@ -1221,22 +1228,24 @@ export function HelloWorldPdf() {
                 <View style={styles.bankRow}>
                   <Text style={styles.bankLabel}>A/C NAME</Text>
                   <View style={[styles.bankValueWrapper, styles.boldText]}>
-                    <Text style={styles.bankValue}>SPS STEEL PVT LTD</Text>
+                    <Text style={styles.bankValue}>
+                      PARAGON REFRACTORIES & MINERALS
+                    </Text>
                   </View>
                 </View>
                 <View style={styles.bankRow}>
                   <Text style={styles.bankLabel}>A/C NO</Text>
                   <View style={styles.bankValueWrapper}>
                     <Text style={[styles.bankValue, styles.boldText]}>
-                      9876543246578544UI1246
+                      758601010050048
                     </Text>
                   </View>
                 </View>
                 <View style={styles.bankRow}>
-                  <Text style={styles.bankLabel}>BANK NAME</Text>
+                  <Text style={styles.bankLabel}>BANK</Text>
                   <View style={styles.bankValueWrapper}>
                     <Text style={[styles.bankValue, styles.boldText]}>
-                      SPS STEEL PVT LTD
+                      UNION BANK OF INDIA
                     </Text>
                   </View>
                 </View>
@@ -1244,7 +1253,7 @@ export function HelloWorldPdf() {
                   <Text style={styles.bankLabel}>BRANCH / IFSC</Text>
                   <View style={styles.bankValueWrapper}>
                     <Text style={[styles.bankValue, styles.boldText]}>
-                      West Bengal Durgapur 7143206 / UIO678687UIUIO123
+                      CITY CENTRE , DURGAPUR / UBIN0815187
                     </Text>
                   </View>
                 </View>
