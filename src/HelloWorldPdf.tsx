@@ -33,9 +33,10 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   companyHeaderName: {
-    fontSize: 14,
+    fontSize: 20,
     textAlign: "center",
     marginBottom: 2,
+    fontWeight: "bold",
   },
   companyHeaderAddress: {
     fontSize: 8,
@@ -105,6 +106,14 @@ const styles = StyleSheet.create({
     paddingLeft: 3,
     fontSize: 9,
     textAlign: "left",
+  },
+
+  // Right-aligned value for totals/taxes
+  lwvValueRight: {
+    flex: 1,
+    fontSize: 9,
+    textAlign: "right",
+    paddingRight: 2,
   },
 
   lwvValueWrapper: {
@@ -219,6 +228,14 @@ const styles = StyleSheet.create({
   labelValueTotalAmountInWords: {
     fontSize: 9,
     marginTop: 1,
+  },
+
+  // Divider line for total rows
+  taxDivider: {
+    borderTopWidth: 1,
+    borderColor: "black",
+    paddingTop: 4,
+    marginTop: 2,
   },
 
   amountTaxDetails: {
@@ -1071,37 +1088,37 @@ export function HelloWorldPdf() {
               <View style={styles.labelWithValue}>
                 <Text style={styles.lwvLabel}>Total Amount before tax</Text>
                 <View style={styles.lwvValueWrapper}>
-                  <Text style={styles.lwvValue}>98765432124.00</Text>
+                  <Text style={styles.lwvValueRight}>98765432124.00</Text>
                 </View>
               </View>
               <View style={styles.labelWithValue}>
                 <Text style={styles.lwvLabel}>Add: CGST @ 9%</Text>
                 <View style={styles.lwvValueWrapper}>
-                  <Text style={styles.lwvValue}>9876543212.00</Text>
+                  <Text style={styles.lwvValueRight}>9876543212.00</Text>
                 </View>
               </View>
               <View style={styles.labelWithValue}>
                 <Text style={styles.lwvLabel}>Add: SGST @ 9%</Text>
                 <View style={styles.lwvValueWrapper}>
-                  <Text style={styles.lwvValue}>9876543212.00</Text>
+                  <Text style={styles.lwvValueRight}>9876543212.00</Text>
                 </View>
               </View>
               <View style={styles.labelWithValue}>
                 <Text style={styles.lwvLabel}>Add: IGST @ 0%</Text>
                 <View style={styles.lwvValueWrapper}>
-                  <Text style={styles.lwvValue}>9876543212.00</Text>
+                  <Text style={styles.lwvValueRight}>9876543212.00</Text>
                 </View>
               </View>
-              <View style={styles.labelWithValue}>
+              <View style={[styles.labelWithValue, styles.taxDivider]}>
                 <Text style={styles.lwvLabel}>Total Tax Amount</Text>
                 <View style={styles.lwvValueWrapper}>
-                  <Text style={styles.lwvValue}>9876543212.00</Text>
+                  <Text style={styles.lwvValueRight}>9876543212.00</Text>
                 </View>
               </View>
-              <View style={styles.labelWithValue}>
+              <View style={[styles.labelWithValue, styles.taxDivider]}>
                 <Text style={styles.lwvLabel}>Total Amount after Tax</Text>
                 <View style={styles.lwvValueWrapper}>
-                  <Text style={styles.lwvValue}>9876543212.00</Text>
+                  <Text style={styles.lwvValueRight}>9876543212.00</Text>
                 </View>
               </View>
             </View>
