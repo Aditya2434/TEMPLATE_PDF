@@ -2,7 +2,7 @@ import { Document, Page, Text, View, StyleSheet } from "@react-pdf/renderer";
 
 const styles = StyleSheet.create({
   page: {
-    padding: 14,
+    padding: 10,
   },
 
   container: {
@@ -13,15 +13,13 @@ const styles = StyleSheet.create({
 
   header: {
     width: "100%",
-    height: 120,
-
     flexDirection: "row",
     alignItems: "center",
-    paddingHorizontal: 12,
+    paddingHorizontal: 10,
   },
   companyLogo: {
-    height: 80,
-    width: 80,
+    height: 64,
+    width: 64,
     borderWidth: 1,
     borderColor: "black",
     justifyContent: "center",
@@ -29,42 +27,41 @@ const styles = StyleSheet.create({
   },
   companyDetails: {
     flexGrow: 1,
-    marginHorizontal: 24,
-    height: 92,
+    marginHorizontal: 12,
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
   },
   companyHeaderName: {
-    fontSize: 20,
+    fontSize: 14,
     textAlign: "center",
-    marginBottom: 4,
+    marginBottom: 2,
   },
   companyHeaderAddress: {
-    fontSize: 9,
+    fontSize: 8,
     textAlign: "center",
   },
   companyHeaderGSTIN: {
-    fontSize: 9,
+    fontSize: 8,
     textAlign: "center",
   },
 
   companyHeaderPAN: {
-    fontSize: 9,
+    fontSize: 8,
     textAlign: "center",
   },
   companyQR: {
-    height: 42,
-    width: 42,
+    height: 36,
+    width: 36,
     borderWidth: 1,
     borderColor: "black",
     justifyContent: "center",
     alignItems: "center",
   },
   sectionTitle: {
-    fontSize: 14,
+    fontSize: 12,
     fontWeight: "bold",
-    marginBottom: 8,
+    marginBottom: 4,
     textAlign: "center",
   },
 
@@ -77,36 +74,36 @@ const styles = StyleSheet.create({
 
   taxInvoiceDetails: {
     flex: 1,
-    padding: 12,
+    padding: 8,
   },
   transportInvoiceDetails: {
     flex: 1,
-    padding: 12,
+    padding: 8,
     borderLeftWidth: 1,
     borderColor: "black",
   },
   labelWithValue: {
     flexDirection: "row",
     alignItems: "center",
-    marginBottom: 4,
+    marginBottom: 3,
     // border: "1px solid red",
   },
   lwvLabel: {
     width: "50%",
     textAlign: "left",
     paddingRight: 8,
-    fontSize: 10,
+    fontSize: 9,
     fontWeight: 500,
   },
   lwvColon: {
     width: 10,
     textAlign: "center",
-    fontSize: 10,
+    fontSize: 9,
   },
   lwvValue: {
     flex: 1,
-    paddingLeft: 4,
-    fontSize: 10,
+    paddingLeft: 3,
+    fontSize: 9,
     textAlign: "left",
   },
 
@@ -144,12 +141,12 @@ const styles = StyleSheet.create({
   },
 
   h3LabelBgGray: {
-    height: 28,
+    height: 22,
     backgroundColor: "#e5e7eb", // background
     flexDirection: "row", // like display:flex
     alignItems: "center", // vertical center
     justifyContent: "center", // horizontal center
-    marginBottom: 12,
+    marginBottom: 8,
   },
   h3Text: {
     fontSize: 9,
@@ -166,7 +163,7 @@ const styles = StyleSheet.create({
 
   amountInWord: {
     flex: 1,
-    padding: 12,
+    padding: 8,
   },
 
   labelTotalAmountInWords: {
@@ -174,18 +171,18 @@ const styles = StyleSheet.create({
   },
 
   labelTitleTotalAmountInWords: {
-    fontSize: 10,
+    fontSize: 9,
     fontWeight: "bold",
   },
 
   labelValueTotalAmountInWords: {
-    fontSize: 10,
-    marginTop: 2,
+    fontSize: 9,
+    marginTop: 1,
   },
 
   amountTaxDetails: {
     flex: 1,
-    padding: 12,
+    padding: 8,
   },
 
   bankDetails: {
@@ -195,23 +192,23 @@ const styles = StyleSheet.create({
 
   bankDetailsInfo: {
     flex: 1,
-    padding: 12,
-  },
-
-  termConditionSupplyContainer: {
-    marginTop: 12,
     padding: 8,
   },
 
+  termConditionSupplyContainer: {
+    marginTop: 8,
+    padding: 6,
+  },
+
   termConditionSupplyTitle: {
-    fontSize: 10,
+    fontSize: 9,
     fontWeight: "bold",
-    marginBottom: 6,
+    marginBottom: 4,
     textDecoration: "underline",
   },
   termConditionSupplyItem: {
-    fontSize: 9,
-    marginBottom: 4,
+    fontSize: 8,
+    marginBottom: 2,
     textAlign: "left",
   },
 
@@ -223,13 +220,13 @@ const styles = StyleSheet.create({
   row: {
     flexDirection: "row",
     alignItems: "stretch", // Ensures children (cell containers) stretch to fill the row's height
-    minHeight: 18,
+    minHeight: 14,
   },
 
   rowHeader: {
     flexDirection: "row",
     alignItems: "stretch", // Ensures children (cell containers) stretch to fill the row's height
-    height: 32,
+    height: 24,
   },
 
   headerRow: {
@@ -238,14 +235,12 @@ const styles = StyleSheet.create({
   },
 
   tableHeaderCellContainer: {
-    height: "100%", // Ensures the cell View fills the row's height
     flexDirection: "row", // Enables flexbox properties for children
     alignItems: "center", // Vertically centers the Text child within this View
     paddingHorizontal: 2, // Small horizontal padding for text inside cells
   },
 
   tableCellContainer: {
-    height: "100%", // Ensures the cell View fills the row's height
     flexDirection: "row", // Enables flexbox properties for children
     alignItems: "center", // Vertically centers the Text child within this View
     paddingHorizontal: 2, // Small horizontal padding for text inside cells
@@ -253,7 +248,7 @@ const styles = StyleSheet.create({
 
   // NEW: Style for the actual <Text> content within the cell container
   tableCellText: {
-    fontSize: 10,
+    fontSize: 9,
     flexGrow: 1, // Allows Text to take available horizontal space
   },
 
@@ -291,11 +286,10 @@ const styles = StyleSheet.create({
   textRight: { textAlign: "right" },
   textRightPadded: {
     textAlign: "right",
-    paddingRight: 10, // Apply padding here to push text from right edge
+    paddingRight: 6, // Apply padding here to push text from right edge
   },
 
   footerContainer: {
-    height: 120,
     width: "100%",
     flexDirection: "row", // display:flex
   },
@@ -308,53 +302,58 @@ const styles = StyleSheet.create({
   },
 
   fSLabel: {
-    fontSize: 9,
-    paddingBottom: 10,
-    paddingLeft: 10,
+    fontSize: 8,
+    paddingBottom: 6,
+    paddingLeft: 8,
   },
 
   footerStamp: {
     flex: 1,
-    padding: 10,
+    padding: 8,
     flexDirection: "column",
   },
 
   fStampStampImg: {
-    height: 92,
+    height: 68,
     width: "100%",
     borderWidth: 1,
     borderColor: "black",
   },
 
   fStampLabel: {
-    paddingTop: 8,
-    fontSize: 9,
-    paddingBottom: 8,
+    paddingTop: 6,
+    fontSize: 8,
+    paddingBottom: 6,
     textAlign: "center",
   },
 
   footerSignature: {
     flex: 1,
-    padding: 10,
+    padding: 8,
     flexDirection: "column",
   },
 
   fSignLabel: {
-    marginBottom: 8,
-    fontSize: 9,
+    marginBottom: 6,
+    fontSize: 8,
   },
 
   fSignPhoto: {
-    height: 84,
+    height: 64,
     width: "100%",
     borderWidth: 1,
     borderColor: "black",
   },
   fSignLabelAuth: {
-    paddingTop: 8,
-    paddingBottom: 8,
+    paddingTop: 6,
+    paddingBottom: 6,
     alignSelf: "flex-end",
-    fontSize: 9,
+    fontSize: 8,
+  },
+
+  // Keep bottom section together
+  bottomBlock: {
+    marginTop: 8,
   },
 });
 
@@ -1068,80 +1067,77 @@ export function HelloWorldPdf() {
             </View>
           </View>
 
-          {/* BANK DETAILS */}
-          <View style={styles.bankDetails}>
-            <View style={styles.bankDetailsInfo}>
-              <View style={styles.labelWithValue}>
-                <Text style={styles.lwvLabel}>A/C NAME</Text>
-                <View style={styles.lwvValueWrapper}>
-                  <Text style={styles.lwvValue}>SPS STEEL PVT LTD</Text>
+          {/* Bottom block kept together */}
+          <View wrap={false} style={styles.bottomBlock}>
+            {/* BANK DETAILS */}
+            <View style={styles.bankDetails}>
+              <View style={styles.bankDetailsInfo}>
+                <View style={styles.labelWithValue}>
+                  <Text style={styles.lwvLabel}>A/C NAME</Text>
+                  <View style={styles.lwvValueWrapper}>
+                    <Text style={styles.lwvValue}>SPS STEEL PVT LTD</Text>
+                  </View>
                 </View>
-              </View>
-              <View style={styles.labelWithValue}>
-                <Text style={styles.lwvLabel}>A/C NO</Text>
-                <View style={styles.lwvValueWrapper}>
-                  <Text style={styles.lwvValue}>9876543246578544UI1246</Text>
+                <View style={styles.labelWithValue}>
+                  <Text style={styles.lwvLabel}>A/C NO</Text>
+                  <View style={styles.lwvValueWrapper}>
+                    <Text style={styles.lwvValue}>9876543246578544UI1246</Text>
+                  </View>
                 </View>
-              </View>
-              <View style={styles.labelWithValue}>
-                <Text style={styles.lwvLabel}>BANK</Text>
-                <View style={styles.lwvValueWrapper}>
-                  <Text style={styles.lwvValue}>SPS STEEL PVT LTD</Text>
+                <View style={styles.labelWithValue}>
+                  <Text style={styles.lwvLabel}>BANK</Text>
+                  <View style={styles.lwvValueWrapper}>
+                    <Text style={styles.lwvValue}>SPS STEEL PVT LTD</Text>
+                  </View>
                 </View>
-              </View>
-              <View style={styles.labelWithValue}>
-                <Text style={styles.lwvLabel}>BRANCH</Text>
-                <View style={styles.lwvValueWrapper}>
-                  <Text style={styles.lwvValue}>
-                    West Bengal Durgapur 7143206
-                  </Text>
-                </View>
-              </View>
-              <View style={styles.labelWithValue}>
-                <Text style={styles.lwvLabel}>IFSC</Text>
-                <View style={styles.lwvValueWrapper}>
-                  <Text style={styles.lwvValue}>UIO678687UIUIO123</Text>
+                <View style={styles.labelWithValue}>
+                  <Text style={styles.lwvLabel}>BRANCH / IFSC</Text>
+                  <View style={styles.lwvValueWrapper}>
+                    <Text style={styles.lwvValue}>
+                      West Bengal Durgapur 7143206 / UIO678687UIUIO123
+                    </Text>
+                  </View>
                 </View>
               </View>
             </View>
-          </View>
 
-          {/* Terms & Condition for Supply: */}
-          <View style={styles.termConditionSupplyContainer}>
-            <Text style={styles.termConditionSupplyTitle}>
-              Terms & Condition for Supply:
-            </Text>
-            <Text style={styles.termConditionSupplyItem}>
-              1. Goods once sold will not be taken back.
-            </Text>
-            <Text style={styles.termConditionSupplyItem}>
-              2. Interest @18% p.a. will be charged if the payment is not made
-              within the stipulated time.
-            </Text>
-          </View>
-
-          {/* Footer */}
-          <View style={styles.footerContainer}>
-            {/* Subject */}
-            <View style={styles.footerSubject}>
-              <Text style={styles.fSLabel}>
-                Subject to DURGAPUR Jurisdiction
+            {/* Terms & Condition for Supply: */}
+            <View style={styles.termConditionSupplyContainer}>
+              <Text style={styles.termConditionSupplyTitle}>
+                Terms & Condition for Supply:
+              </Text>
+              <Text style={styles.termConditionSupplyItem}>
+                1. Goods once sold will not be taken back.
+              </Text>
+              <Text style={styles.termConditionSupplyItem}>
+                2. Interest @18% p.a. will be charged if the payment is not made
+                within the stipulated time.
               </Text>
             </View>
 
-            {/* Stamp */}
-            <View style={styles.footerStamp}>
-              <View style={styles.fStampStampImg} />
-              <Text style={styles.fStampLabel}>Common seal</Text>
-            </View>
+            {/* Footer */}
+            <View style={styles.footerContainer}>
+              {/* Subject */}
+              <View style={styles.footerSubject}>
+                <Text style={styles.fSLabel}>
+                  Subject to DURGAPUR Jurisdiction
+                </Text>
+              </View>
 
-            {/* Signature */}
-            <View style={styles.footerSignature}>
-              <Text style={styles.fSignLabel}>
-                For Paragon Refactories and Minerals
-              </Text>
-              <View style={styles.fSignPhoto} />
-              <Text style={styles.fSignLabelAuth}>Authorised</Text>
+              {/* Stamp */}
+              <View style={styles.footerStamp}>
+                <View style={styles.fStampStampImg} />
+                <Text style={styles.fStampLabel}>Common seal</Text>
+              </View>
+
+              {/* Signature */}
+              <View style={styles.footerSignature}>
+                <Text style={styles.fSignLabel}>
+                  For Paragon Refactories and Minerals
+                </Text>
+                <View style={styles.fSignPhoto} />
+                <Text style={styles.fSignLabelAuth}>Authorised</Text>
+              </View>
             </View>
           </View>
         </View>
