@@ -2,7 +2,7 @@ import { Document, Page, Text, View, StyleSheet } from "@react-pdf/renderer";
 
 const styles = StyleSheet.create({
   page: {
-    padding: 10,
+    padding: 8,
   },
 
   container: {
@@ -120,6 +120,31 @@ const styles = StyleSheet.create({
     flexWrap: "nowrap",
   },
 
+  // Bank details tighter layout
+  bankRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginBottom: 2,
+  },
+  bankLabel: {
+    width: "40%",
+    textAlign: "left",
+    paddingRight: 6,
+    fontSize: 9,
+    fontWeight: 500,
+  },
+  bankValueWrapper: {
+    width: "60%",
+    flexDirection: "row",
+    alignItems: "flex-start",
+  },
+  bankValue: {
+    flex: 1,
+    paddingLeft: 2,
+    fontSize: 9,
+    textAlign: "left",
+  },
+
   addressBillShipping: {
     flexDirection: "row",
     width: "100%",
@@ -163,11 +188,27 @@ const styles = StyleSheet.create({
 
   amountInWord: {
     flex: 1,
-    padding: 8,
+    padding: 6,
   },
 
   labelTotalAmountInWords: {
     width: "100%",
+  },
+
+  // Single-row label/value for amount in words
+  amountWordsRow: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  amountWordsLabel: {
+    fontSize: 9,
+    fontWeight: "bold",
+    marginRight: 3,
+  },
+  amountWordsValue: {
+    fontSize: 9,
+    lineHeight: 1.1,
+    flexGrow: 1,
   },
 
   labelTitleTotalAmountInWords: {
@@ -1014,14 +1055,13 @@ export function HelloWorldPdf() {
             {/* Tax Invoice Details */}
             <View style={styles.amountInWord}>
               <View style={styles.labelTotalAmountInWords}>
-                <Text style={styles.labelTitleTotalAmountInWords}>
-                  <Text style={{ fontWeight: "bold" }}>
-                    Total Amount in Words INR:
-                  </Text>
-                  <Text style={{ fontWeight: "normal" }}>
-                    TWENTY NINE LAKH THIRY THOUAND THIS IS A LONG WORD NEED TO
-                    FIX HERE
-                  </Text>
+                <Text style={styles.amountWordsLabel}>
+                  Total Amount in Words INR:
+                </Text>
+                <Text style={styles.amountWordsValue}>
+                  TWENTY NINE LAKH THIRY THOUAND THIS IS A LONG WORD NEED TO FIX
+                  HERE TWENTY NINE LAKH THIRY THOUAND THIS IS A LONG WORD NEED
+                  TO FIX
                 </Text>
               </View>
             </View>
@@ -1072,28 +1112,28 @@ export function HelloWorldPdf() {
             {/* BANK DETAILS */}
             <View style={styles.bankDetails}>
               <View style={styles.bankDetailsInfo}>
-                <View style={styles.labelWithValue}>
-                  <Text style={styles.lwvLabel}>A/C NAME</Text>
-                  <View style={styles.lwvValueWrapper}>
-                    <Text style={styles.lwvValue}>SPS STEEL PVT LTD</Text>
+                <View style={styles.bankRow}>
+                  <Text style={styles.bankLabel}>A/C NAME</Text>
+                  <View style={styles.bankValueWrapper}>
+                    <Text style={styles.bankValue}>SPS STEEL PVT LTD</Text>
                   </View>
                 </View>
-                <View style={styles.labelWithValue}>
-                  <Text style={styles.lwvLabel}>A/C NO</Text>
-                  <View style={styles.lwvValueWrapper}>
-                    <Text style={styles.lwvValue}>9876543246578544UI1246</Text>
+                <View style={styles.bankRow}>
+                  <Text style={styles.bankLabel}>A/C NO</Text>
+                  <View style={styles.bankValueWrapper}>
+                    <Text style={styles.bankValue}>9876543246578544UI1246</Text>
                   </View>
                 </View>
-                <View style={styles.labelWithValue}>
-                  <Text style={styles.lwvLabel}>BANK</Text>
-                  <View style={styles.lwvValueWrapper}>
-                    <Text style={styles.lwvValue}>SPS STEEL PVT LTD</Text>
+                <View style={styles.bankRow}>
+                  <Text style={styles.bankLabel}>BANK</Text>
+                  <View style={styles.bankValueWrapper}>
+                    <Text style={styles.bankValue}>SPS STEEL PVT LTD</Text>
                   </View>
                 </View>
-                <View style={styles.labelWithValue}>
-                  <Text style={styles.lwvLabel}>BRANCH / IFSC</Text>
-                  <View style={styles.lwvValueWrapper}>
-                    <Text style={styles.lwvValue}>
+                <View style={styles.bankRow}>
+                  <Text style={styles.bankLabel}>BRANCH / IFSC</Text>
+                  <View style={styles.bankValueWrapper}>
+                    <Text style={styles.bankValue}>
                       West Bengal Durgapur 7143206 / UIO678687UIUIO123
                     </Text>
                   </View>
