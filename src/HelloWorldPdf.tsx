@@ -11,6 +11,10 @@ const styles = StyleSheet.create({
     // height: "100%", // to fit single page
   },
 
+  boldText: {
+    fontWeight: "bold",
+  },
+
   header: {
     width: "100%",
     flexDirection: "row",
@@ -193,6 +197,7 @@ const styles = StyleSheet.create({
     borderTopWidth: 1,
     borderBottomWidth: 1,
     borderColor: "black",
+    fontWeight: "bold",
   },
 
   amountInWord: {
@@ -250,12 +255,15 @@ const styles = StyleSheet.create({
 
   bankDetailsInfo: {
     flex: 1,
-    padding: 8,
+    paddingLeft: 8,
+    paddingRight: 8,
   },
 
   termConditionSupplyContainer: {
-    marginTop: 8,
-    padding: 6,
+    paddingLeft: 8,
+    paddingRight: 8,
+    paddingTop: 4,
+    paddingBottom: 4,
   },
 
   termConditionSupplyTitle: {
@@ -375,8 +383,6 @@ const styles = StyleSheet.create({
   fStampStampImg: {
     width: "100%",
     height: "100%",
-    borderWidth: 1,
-    borderColor: "black",
   },
 
   fStampLabel: {
@@ -400,8 +406,6 @@ const styles = StyleSheet.create({
   fSignPhoto: {
     width: "100%",
     height: "100%",
-    borderWidth: 1,
-    borderColor: "black",
   },
   fSignLabelAuth: {
     paddingTop: 6,
@@ -413,6 +417,11 @@ const styles = StyleSheet.create({
   // Keep bottom section together
   bottomBlock: {
     marginTop: 8,
+  },
+
+  bankRowHeader: {
+    fontSize: 8,
+    fontWeight: "bold",
   },
 });
 
@@ -434,10 +443,12 @@ export function HelloWorldPdf() {
                 27/N, SWAPNA MARKET, DURGAPUR-713206, DIST – BARDHAMAN, WEST
                 BENGAL
               </Text>
-              <Text style={styles.companyHeaderGSTIN}>
+              <Text style={[styles.companyHeaderGSTIN, styles.boldText]}>
                 GSTIN: 19AHVPC4398K1ZH
               </Text>
-              <Text style={styles.companyHeaderPAN}>PAN: AHVPC4398K</Text>
+              <Text style={[styles.companyHeaderPAN, styles.boldText]}>
+                PAN: AHVPC4398K
+              </Text>
             </View>
 
             <View style={styles.companyQR}>
@@ -458,14 +469,18 @@ export function HelloWorldPdf() {
                 <Text style={styles.lwvLabel}>Tax Invoice No.</Text>
                 <View style={styles.lwvValueWrapper}>
                   <Text style={styles.lwvColon}>:</Text>
-                  <Text style={styles.lwvValue}>PRM/25-26/001</Text>
+                  <Text style={[styles.lwvValue, styles.boldText]}>
+                    PRM/25-26/001
+                  </Text>
                 </View>
               </View>
               <View style={styles.labelWithValue}>
                 <Text style={styles.lwvLabel}>Date</Text>
                 <View style={styles.lwvValueWrapper}>
                   <Text style={styles.lwvColon}>:</Text>
-                  <Text style={styles.lwvValue}>20/11/2025</Text>
+                  <Text style={[styles.lwvValue, styles.boldText]}>
+                    20/11/2025
+                  </Text>
                 </View>
               </View>
               <View style={styles.labelWithValue}>
@@ -501,14 +516,18 @@ export function HelloWorldPdf() {
                 <Text style={styles.lwvLabel}>Vehicle No</Text>
                 <View style={styles.lwvValueWrapper}>
                   <Text style={styles.lwvColon}>:</Text>
-                  <Text style={styles.lwvValue}>58WE54654</Text>
+                  <Text style={[styles.lwvValue, styles.boldText]}>
+                    58WE54654
+                  </Text>
                 </View>
               </View>
               <View style={styles.labelWithValue}>
                 <Text style={styles.lwvLabel}>Date of Supply</Text>
                 <View style={styles.lwvValueWrapper}>
                   <Text style={styles.lwvColon}>:</Text>
-                  <Text style={styles.lwvValue}>20/11/2025</Text>
+                  <Text style={[styles.lwvValue, styles.boldText]}>
+                    20/11/2025
+                  </Text>
                 </View>
               </View>
               <View style={styles.labelWithValue}>
@@ -522,21 +541,25 @@ export function HelloWorldPdf() {
                 <Text style={styles.lwvLabel}>Order No</Text>
                 <View style={styles.lwvValueWrapper}>
                   <Text style={styles.lwvColon}>:</Text>
-                  <Text style={styles.lwvValue}>123456</Text>
+                  <Text style={[styles.lwvValue, styles.boldText]}>123456</Text>
                 </View>
               </View>
               <View style={styles.labelWithValue}>
                 <Text style={styles.lwvLabel}>GR/LR No</Text>
                 <View style={styles.lwvValueWrapper}>
                   <Text style={styles.lwvColon}>:</Text>
-                  <Text style={styles.lwvValue}>4654897945</Text>
+                  <Text style={[styles.lwvValue, styles.boldText]}>
+                    4654897945
+                  </Text>
                 </View>
               </View>
               <View style={styles.labelWithValue}>
                 <Text style={styles.lwvLabel}>E WAY BILL No</Text>
                 <View style={styles.lwvValueWrapper}>
                   <Text style={styles.lwvColon}>:</Text>
-                  <Text style={styles.lwvValue}>54654889864</Text>
+                  <Text style={[styles.lwvValue, styles.boldText]}>
+                    54654889864
+                  </Text>
                 </View>
               </View>
             </View>
@@ -556,7 +579,9 @@ export function HelloWorldPdf() {
                 <Text style={styles.lwvLabel}>Name</Text>
                 <View style={styles.lwvValueWrapper}>
                   <Text style={styles.lwvColon}>:</Text>
-                  <Text style={styles.lwvValue}>SPS STEEL PVT LTD</Text>
+                  <Text style={[styles.lwvValue, styles.boldText]}>
+                    SPS STEEL PVT LTD
+                  </Text>
                 </View>
               </View>
               <View style={styles.labelWithValue}>
@@ -598,7 +623,9 @@ export function HelloWorldPdf() {
                 <Text style={styles.lwvLabel}>Name</Text>
                 <View style={styles.lwvValueWrapper}>
                   <Text style={styles.lwvColon}>:</Text>
-                  <Text style={styles.lwvValue}>SPS STEEL PVT LTD</Text>
+                  <Text style={[styles.lwvValue, styles.boldText]}>
+                    SPS STEEL PVT LTD
+                  </Text>
                 </View>
               </View>
               <View style={styles.labelWithValue}>
@@ -1087,37 +1114,49 @@ export function HelloWorldPdf() {
             {/* Transport Invoice Details */}
             <View style={styles.amountTaxDetails}>
               <View style={styles.labelWithValue}>
-                <Text style={styles.lwvLabel}>Total Amount before tax</Text>
+                <Text style={[styles.lwvLabel, styles.boldText]}>
+                  Total Amount before tax
+                </Text>
                 <View style={styles.lwvValueWrapper}>
                   <Text style={styles.lwvValueRight}>98765432124.00</Text>
                 </View>
               </View>
               <View style={styles.labelWithValue}>
-                <Text style={styles.lwvLabel}>Add: CGST @ 9%</Text>
+                <Text style={[styles.lwvLabel, styles.boldText]}>
+                  Add: CGST @ 9%
+                </Text>
                 <View style={styles.lwvValueWrapper}>
                   <Text style={styles.lwvValueRight}>9876543212.00</Text>
                 </View>
               </View>
               <View style={styles.labelWithValue}>
-                <Text style={styles.lwvLabel}>Add: SGST @ 9%</Text>
+                <Text style={[styles.lwvLabel, styles.boldText]}>
+                  Add: SGST @ 9%
+                </Text>
                 <View style={styles.lwvValueWrapper}>
                   <Text style={styles.lwvValueRight}>9876543212.00</Text>
                 </View>
               </View>
               <View style={styles.labelWithValue}>
-                <Text style={styles.lwvLabel}>Add: IGST @ 0%</Text>
+                <Text style={[styles.lwvLabel, styles.boldText]}>
+                  Add: IGST @ 0%
+                </Text>
                 <View style={styles.lwvValueWrapper}>
                   <Text style={styles.lwvValueRight}>9876543212.00</Text>
                 </View>
               </View>
               <View style={[styles.labelWithValue, styles.taxDivider]}>
-                <Text style={styles.lwvLabel}>Total Tax Amount</Text>
+                <Text style={[styles.lwvLabel, styles.boldText]}>
+                  Total Tax Amount
+                </Text>
                 <View style={styles.lwvValueWrapper}>
                   <Text style={styles.lwvValueRight}>9876543212.00</Text>
                 </View>
               </View>
               <View style={[styles.labelWithValue, styles.taxDivider]}>
-                <Text style={styles.lwvLabel}>Total Amount after Tax</Text>
+                <Text style={[styles.lwvLabel, styles.boldText]}>
+                  Total Amount after Tax
+                </Text>
                 <View style={styles.lwvValueWrapper}>
                   <Text style={styles.lwvValueRight}>9876543212.00</Text>
                 </View>
@@ -1130,28 +1169,34 @@ export function HelloWorldPdf() {
             {/* BANK DETAILS */}
             <View style={styles.bankDetails}>
               <View style={styles.bankDetailsInfo}>
+                <Text style={styles.bankRowHeader}>OUR BANK DETAIL :</Text>
+
                 <View style={styles.bankRow}>
                   <Text style={styles.bankLabel}>A/C NAME</Text>
-                  <View style={styles.bankValueWrapper}>
+                  <View style={[styles.bankValueWrapper, styles.boldText]}>
                     <Text style={styles.bankValue}>SPS STEEL PVT LTD</Text>
                   </View>
                 </View>
                 <View style={styles.bankRow}>
                   <Text style={styles.bankLabel}>A/C NO</Text>
                   <View style={styles.bankValueWrapper}>
-                    <Text style={styles.bankValue}>9876543246578544UI1246</Text>
+                    <Text style={[styles.bankValue, styles.boldText]}>
+                      9876543246578544UI1246
+                    </Text>
                   </View>
                 </View>
                 <View style={styles.bankRow}>
                   <Text style={styles.bankLabel}>BANK</Text>
                   <View style={styles.bankValueWrapper}>
-                    <Text style={styles.bankValue}>SPS STEEL PVT LTD</Text>
+                    <Text style={[styles.bankValue, styles.boldText]}>
+                      SPS STEEL PVT LTD
+                    </Text>
                   </View>
                 </View>
                 <View style={styles.bankRow}>
                   <Text style={styles.bankLabel}>BRANCH / IFSC</Text>
                   <View style={styles.bankValueWrapper}>
-                    <Text style={styles.bankValue}>
+                    <Text style={[styles.bankValue, styles.boldText]}>
                       West Bengal Durgapur 7143206 / UIO678687UIUIO123
                     </Text>
                   </View>
@@ -1168,8 +1213,9 @@ export function HelloWorldPdf() {
                 1. Goods once sold will not be taken back.
               </Text>
               <Text style={styles.termConditionSupplyItem}>
-                2. Interest @18% p.a. will be charged if the payment is not made
-                within the stipulated time.
+                2. Interest @<Text style={styles.boldText}>18%</Text> p.a. will
+                be charged if the payment is not made within the stipulated
+                time.
               </Text>
             </View>
 
@@ -1178,7 +1224,8 @@ export function HelloWorldPdf() {
               {/* Subject */}
               <View style={styles.footerSubject}>
                 <Text style={styles.fSLabel}>
-                  Subject to DURGAPUR Jurisdiction
+                  Subject to <Text style={styles.boldText}>DURGAPUR</Text>{" "}
+                  Jurisdiction
                 </Text>
               </View>
 
@@ -1190,11 +1237,13 @@ export function HelloWorldPdf() {
 
               {/* Signature */}
               <View style={styles.footerSignature}>
-                <Text style={styles.fSignLabel}>
+                <Text style={[styles.fSignLabel, styles.boldText]}>
                   For Paragon Refactories and Minerals
                 </Text>
                 <View style={styles.fSignPhoto} />
-                <Text style={styles.fSignLabelAuth}>Authorised</Text>
+                <Text style={[styles.fSignLabelAuth, styles.boldText]}>
+                  Authorised
+                </Text>
               </View>
             </View>
           </View>
