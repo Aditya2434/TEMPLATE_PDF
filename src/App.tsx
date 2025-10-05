@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react';
 import { PDFDownloadLink, PDFViewer } from '@react-pdf/renderer';
 import { Invoice, InvoiceItem } from './types';
 import { InvoicePdf } from './InvoicePdf';
+import { HelloWorldPdf } from './HelloWorldPdf';
 
 const sampleInvoice: Invoice = {
 	invoiceNumber: 'INV-0001',
@@ -30,6 +31,7 @@ const sampleInvoice: Invoice = {
 export default function App() {
 	const [invoice, setInvoice] = useState<Invoice>(sampleInvoice);
 	const [showPreview, setShowPreview] = useState(false);
+	const [activeTab, setActiveTab] = useState<'gst' | 'custom'>('gst');
 
 	const subtotal = useMemo(() => invoice.items.reduce((sum, i) => sum + i.quantity * i.unitPrice, 0), [invoice.items]);
 
@@ -49,62 +51,85 @@ export default function App() {
 	}
 
 	return (
-		<div style={{ display: 'grid', gridTemplateColumns: showPreview ? '420px 1fr' : '1fr', height: '100vh' }}>
-			<div style={{ padding: 16, overflow: 'auto', borderRight: showPreview ? '1px solid #e5e7eb' : 'none' }}>
-				<h2 style={{ marginTop: 0 }}>Invoice Builder (TEST)</h2>
-				<section>
-					<h3>Company</h3>
-					<input placeholder="Name" value={invoice.company.name} onChange={e => setInvoice({ ...invoice, company: { ...invoice.company, name: e.target.value } })} style={{ width: '100%', marginBottom: 8 }} />
-					<textarea placeholder="Address" value={invoice.company.address} onChange={e => setInvoice({ ...invoice, company: { ...invoice.company, address: e.target.value } })} style={{ width: '100%', marginBottom: 8 }} />
-					<input placeholder="Phone" value={invoice.company.phone} onChange={e => setInvoice({ ...invoice, company: { ...invoice.company, phone: e.target.value } })} style={{ width: '100%', marginBottom: 8 }} />
-					<input placeholder="Email" value={invoice.company.email} onChange={e => setInvoice({ ...invoice, company: { ...invoice.company, email: e.target.value } })} style={{ width: '100%', marginBottom: 8 }} />
-				</section>
-				<section>
-					<h3>Client</h3>
-					<input placeholder="Name" value={invoice.client.name} onChange={e => setInvoice({ ...invoice, client: { ...invoice.client, name: e.target.value } })} style={{ width: '100%', marginBottom: 8 }} />
-					<textarea placeholder="Address" value={invoice.client.address} onChange={e => setInvoice({ ...invoice, client: { ...invoice.client, address: e.target.value } })} style={{ width: '100%', marginBottom: 8 }} />
-					<input placeholder="Email" value={invoice.client.email} onChange={e => setInvoice({ ...invoice, client: { ...invoice.client, email: e.target.value } })} style={{ width: '100%', marginBottom: 8 }} />
-				</section>
-				<section>
-					<h3>Invoice</h3>
-					<input placeholder="Invoice No" value={invoice.invoiceNumber} onChange={e => setInvoice({ ...invoice, invoiceNumber: e.target.value })} style={{ width: '100%', marginBottom: 8 }} />
-					<input type="date" placeholder="Issue Date" value={invoice.tissueDate} onChange={e => setInvoice({ ...invoice, tissueDate: e.target.value })} style={{ width: '100%', marginBottom: 8 }} />
-					<input type="date" placeholder="Due Date" value={invoice.dueDate} onChange={e => setInvoice({ ...invoice, dueDate: e.target.value })} style={{ width: '100%', marginBottom: 8 }} />
-					<textarea placeholder="Notes" value={invoice.notes || ''} onChange={e => setInvoice({ ...invoice, notes: e.target.value })} style={{ width: '100%', marginBottom: 8 }} />
-				</section>
-				<section>
-					<h3>Items</h3>
-					{invoice.items.map((item, idx) => (
-						<div key={idx} style={{ display: 'grid', gridTemplateColumns: '1fr 80px 120px 60px', gap: 8, marginBottom: 8 }}>
-							<input placeholder="Description" value={item.description} onChange={e => updateItem(idx, { description: e.target.value })} />
-							<input type="number" placeholder="Qty" value={item.quantity} onChange={e => updateItem(idx, { quantity: Number(e.target.value) })} />
-							<input type="number" placeholder="Unit Price" value={item.unitPrice} onChange={e => updateItem(idx, { unitPrice: Number(e.target.value) })} />
-							<button onClick={() => removeItem(idx)}>Del</button>
-						</div>
-					))}
-					<button onClick={addItem}>Add Item</button>
-					<div style={{ marginTop: 12, fontWeight: 600 }}>Subtotal: {subtotal.toFixed(2)}</div>
-				</section>
-				<div style={{ display: 'flex', gap: 8, marginTop: 16 }}>
-					<button onClick={() => setShowPreview(true)}>Show Preview</button>
-					<PDFDownloadLink document={<InvoicePdf invoice={invoice} />} fileName={`${invoice.invoiceNumber}.pdf`}>
-						{({ loading }) => (loading ? 'Preparing PDF…' : 'Download PDF')}
-					</PDFDownloadLink>
+		<div style={{ display: 'grid', gridTemplateRows: '48px 1fr', height: '100vh' }}>
+			<div style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '0 16px', borderBottom: '1px solid #e5e7eb' }}>
+				<button onClick={() => setActiveTab('gst')} style={{ padding: '6px 10px', border: activeTab === 'gst' ? '2px solid #111' : '1px solid #ccc', background: activeTab === 'gst' ? '#f9fafb' : '#fff' }}>GST PDF</button>
+				<button onClick={() => setActiveTab('custom')} style={{ padding: '6px 10px', border: activeTab === 'custom' ? '2px solid #111' : '1px solid #ccc', background: activeTab === 'custom' ? '#f9fafb' : '#fff' }}>My PDF</button>
+				<div style={{ marginLeft: 'auto', display: 'flex', gap: 8 }}>
+					{activeTab === 'gst' ? (
+						<PDFDownloadLink document={<InvoicePdf invoice={invoice} />} fileName={`${invoice.invoiceNumber}.pdf`}>
+							{({ loading }) => (loading ? 'Preparing PDF…' : 'Download PDF')}
+						</PDFDownloadLink>
+					) : (
+						<PDFDownloadLink document={<HelloWorldPdf />} fileName={`my-template.pdf`}>
+							{({ loading }) => (loading ? 'Preparing PDF…' : 'Download PDF')}
+						</PDFDownloadLink>
+					)}
 				</div>
 			</div>
-			{showPreview ? (
-				<div style={{ position: 'relative', height: '100%', minWidth: 0 }}>
-					<button
-						style={{ position: 'absolute', top: 8, right: 8, zIndex: 10 }}
-						onClick={() => setShowPreview(false)}
-					>
-						Close Preview
-					</button>
+
+			{activeTab === 'gst' ? (
+				<div style={{ display: 'grid', gridTemplateColumns: showPreview ? '420px 1fr' : '1fr' }}>
+					<div style={{ padding: 16, overflow: 'auto', borderRight: showPreview ? '1px solid #e5e7eb' : 'none' }}>
+						<h2 style={{ marginTop: 0 }}>Invoice Builder (TEST)</h2>
+						<section>
+							<h3>Company</h3>
+							<input placeholder="Name" value={invoice.company.name} onChange={e => setInvoice({ ...invoice, company: { ...invoice.company, name: e.target.value } })} style={{ width: '100%', marginBottom: 8 }} />
+							<textarea placeholder="Address" value={invoice.company.address} onChange={e => setInvoice({ ...invoice, company: { ...invoice.company, address: e.target.value } })} style={{ width: '100%', marginBottom: 8 }} />
+							<input placeholder="Phone" value={invoice.company.phone} onChange={e => setInvoice({ ...invoice, company: { ...invoice.company, phone: e.target.value } })} style={{ width: '100%', marginBottom: 8 }} />
+							<input placeholder="Email" value={invoice.company.email} onChange={e => setInvoice({ ...invoice, company: { ...invoice.company, email: e.target.value } })} style={{ width: '100%', marginBottom: 8 }} />
+						</section>
+						<section>
+							<h3>Client</h3>
+							<input placeholder="Name" value={invoice.client.name} onChange={e => setInvoice({ ...invoice, client: { ...invoice.client, name: e.target.value } })} style={{ width: '100%', marginBottom: 8 }} />
+							<textarea placeholder="Address" value={invoice.client.address} onChange={e => setInvoice({ ...invoice, client: { ...invoice.client, address: e.target.value } })} style={{ width: '100%', marginBottom: 8 }} />
+							<input placeholder="Email" value={invoice.client.email} onChange={e => setInvoice({ ...invoice, client: { ...invoice.client, email: e.target.value } })} style={{ width: '100%', marginBottom: 8 }} />
+						</section>
+						<section>
+							<h3>Invoice</h3>
+							<input placeholder="Invoice No" value={invoice.invoiceNumber} onChange={e => setInvoice({ ...invoice, invoiceNumber: e.target.value })} style={{ width: '100%', marginBottom: 8 }} />
+							<input type="date" placeholder="Issue Date" value={invoice.tissueDate} onChange={e => setInvoice({ ...invoice, tissueDate: e.target.value })} style={{ width: '100%', marginBottom: 8 }} />
+							<input type="date" placeholder="Due Date" value={invoice.dueDate} onChange={e => setInvoice({ ...invoice, dueDate: e.target.value })} style={{ width: '100%', marginBottom: 8 }} />
+							<textarea placeholder="Notes" value={invoice.notes || ''} onChange={e => setInvoice({ ...invoice, notes: e.target.value })} style={{ width: '100%', marginBottom: 8 }} />
+						</section>
+						<section>
+							<h3>Items</h3>
+							{invoice.items.map((item, idx) => (
+								<div key={idx} style={{ display: 'grid', gridTemplateColumns: '1fr 80px 120px 60px', gap: 8, marginBottom: 8 }}>
+									<input placeholder="Description" value={item.description} onChange={e => updateItem(idx, { description: e.target.value })} />
+									<input type="number" placeholder="Qty" value={item.quantity} onChange={e => updateItem(idx, { quantity: Number(e.target.value) })} />
+									<input type="number" placeholder="Unit Price" value={item.unitPrice} onChange={e => updateItem(idx, { unitPrice: Number(e.target.value) })} />
+									<button onClick={() => removeItem(idx)}>Del</button>
+								</div>
+							))}
+							<button onClick={addItem}>Add Item</button>
+							<div style={{ marginTop: 12, fontWeight: 600 }}>Subtotal: {subtotal.toFixed(2)}</div>
+						</section>
+						<div style={{ display: 'flex', gap: 8, marginTop: 16 }}>
+							<button onClick={() => setShowPreview(true)}>Show Preview</button>
+						</div>
+					</div>
+					{showPreview ? (
+						<div style={{ position: 'relative', height: '100%', minWidth: 0 }}>
+							<button
+								style={{ position: 'absolute', top: 8, right: 8, zIndex: 10 }}
+								onClick={() => setShowPreview(false)}
+							>
+								Close Preview
+							</button>
+							<PDFViewer style={{ width: '100%', height: '100%' }} showToolbar>
+								<InvoicePdf invoice={invoice} />
+							</PDFViewer>
+						</div>
+					) : null}
+				</div>
+			) : (
+				<div style={{ width: '100%', height: '100%' }}>
 					<PDFViewer style={{ width: '100%', height: '100%' }} showToolbar>
-						<InvoicePdf invoice={invoice} />
+						<HelloWorldPdf />
 					</PDFViewer>
 				</div>
-			) : null}
+			)}
 		</div>
 	);
 }

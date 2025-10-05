@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <style>
+    .product-table {
+      width: 100%;
+      border: 1px solid black;
+    }
+
+    .product-table-column {
+      height: 32px;
+    }
+
+    .product-table-column {
+      display: flex;
+      width: 100%;
+      text-align: center;
+      align-content: center;
+      border-bottom: 1px solid black;
+    }
+
+    .product-table-item {
+      height: 32px;
+      display: flex;
+      width: 100%;
+      text-align: center;
+      align-content: center;
+    }
+
+    .product-table-cell-serial-no {
+      width: 5%;
+      text-align: center;
+      align-content: center;
+    }
+
+    .product-table-cell-product-name {
+      flex-grow: 1;
+      text-align: center;
+      align-content: center;
+    }
+
+    .product-table-cell-hsn-code {
+      width: 10%;
+      text-align: center;
+      align-content: center;
+    }
+
+    .product-table-cell-umo {
+      width: 10%;
+      text-align: center;
+      align-content: center;
+    }
+
+    .product-table-cell-qty {
+      width: 15%;
+      text-align: center;
+      align-content: center;
+    }
+
+    .product-table-cell-rate {
+      width: 10%;
+      text-align: right;
+      align-content: center;
+    }
+
+    .product-table-cell-total {
+      width: 15%;
+      text-align: right;
+      align-content: center;
+    }
+
+    .col-header .product-table-cell-serial-no,
+    .col-header .product-table-cell-product-name,
+    .col-header .product-table-cell-hsn-code,
+    .col-header .product-table-cell-umo,
+    .col-header .product-table-cell-qty,
+    .col-header .product-table-cell-rate,
+    .col-header .product-table-cell-total {
+      border-right: 1px solid black;
+    }
+
+    .col-header .product-table-cell-total {
+      border-right: none;
+    }
+
+    .col-header .product-table-cell-rate,
+    .col-header .product-table-cell-total {
+      text-align: center;
+    }
+
+    .product-table-item .product-table-cell-serial-no,
+    .product-table-item .product-table-cell-product-name,
+    .product-table-item .product-table-cell-hsn-code,
+    .product-table-item .product-table-cell-umo,
+    .product-table-item .product-table-cell-qty,
+    .product-table-item .product-table-cell-rate {
+      border-right: 1px solid black;
+    }
+
+    .product-table-cell-rate,
+    .product-table-cell-total {
+      padding-right: 10px;
+    }
+
+    .product-table-item .product-table-cell-total {
+      border-right: none;
+    }
+  </style>
+
+  <body>
+    The content of the body element is displayed in your browser.
+
+    <div class="product-table">
+      <div class="product-table-column col-header">
+        <div class="product-table-cell-serial-no">S.NO</div>
+        <div class="product-table-cell-product-name">DESCRIPTION OF GOODS</div>
+        <div class="product-table-cell-hsn-code">HSN CODE</div>
+        <div class="product-table-cell-umo">UOM</div>
+        <div class="product-table-cell-qty">QUANTITY</div>
+        <div class="product-table-cell-rate">RATE</div>
+        <div class="product-table-cell-total">AMOUNT</div>
+      </div>
+      <div class="product-table-item col-one">
+        <div class="product-table-cell-serial-no">1</div>
+        <div class="product-table-cell-product-name">BAR</div>
+        <div class="product-table-cell-hsn-code">456789</div>
+        <div class="product-table-cell-umo">SET</div>
+        <div class="product-table-cell-qty">100000</div>
+        <div class="product-table-cell-rate">1234567891</div>
+        <div class="product-table-cell-total">123456789</div>
+      </div>
+
+      <div class="product-table-item col-two">
+        <div class="product-table-cell-serial-no">1</div>
+        <div class="product-table-cell-product-name">BAR</div>
+        <div class="product-table-cell-hsn-code">456789</div>
+        <div class="product-table-cell-umo">SET</div>
+        <div class="product-table-cell-qty">100000</div>
+        <div class="product-table-cell-rate">1234567891</div>
+        <div class="product-table-cell-total">1000</div>
+      </div>
+    </div>
+  </body>
+</html>
