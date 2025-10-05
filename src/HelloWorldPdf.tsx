@@ -3,6 +3,7 @@ import { Document, Page, Text, View, StyleSheet } from "@react-pdf/renderer";
 const styles = StyleSheet.create({
   page: {
     padding: 12,
+    paddingTop: 24,
   },
 
   container: {
@@ -655,7 +656,7 @@ export function HelloWorldPdf() {
             <View style={styles.shippingAddressDetails}>
               <View style={styles.h3LabelBgGray}>
                 <Text style={styles.h3Text}>
-                  DETAILS OF RECEIVER (BILLED TO)
+                  DETAILS OF RECEIVER (SHIPPED TO)
                 </Text>
               </View>
 
